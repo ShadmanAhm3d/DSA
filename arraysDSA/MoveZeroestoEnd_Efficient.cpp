@@ -1,25 +1,24 @@
-#include <iostream>
+#include <bits/stdc++.h>
 
 using namespace std;
-// Move all zeros in an array to the end;
 
-int Move(int arr[], int n)
-{
+
+ void Move(int arr[], int n){
+
+//Efficient way to move zeroes to end in constant time and O(1)
+
+    int count = 0;
 
     for (int i = 0; i < n; i++)
     {
-        if (arr[i] == 0)
-        {
-            for (int j = i + 1; j < n; j++)
-            
-                if (arr[j]!= 0)
-                    swap(arr[i], arr[j]);
-            
+        if(arr[i]!= 0)   {
+            swap(arr[i],arr[count]);
+            count++;
         }
     }
 
-}
 
+}
 //To print the array
 void printArray(int arr[], int n)
 {
@@ -29,8 +28,7 @@ void printArray(int arr[], int n)
   
 int main()
 {
-    int arr[] = { 0, 1, 9, 8, 4, 0, 0, 2,
-                         7, 0, 6, 0, 9 };
+    int arr[] = { 1,2,3,0,4,0,6,0,6,0,4,0 };
     int n = sizeof(arr) / sizeof(arr[0]);
   
     cout << "Original array: ";

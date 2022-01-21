@@ -4,17 +4,17 @@ using namespace std;
 /* C++ Function to print leaders in an array */
 void printLeaders(int arr[], int size)
 {
-    int max_from_right =  arr[size-1];
+    int currentleader =  arr[size-1];
  
     /* Rightmost element is always leader */
-    cout << max_from_right << " ";
+    cout <<currentleader<< " ";
      
     for (int i = size-2; i >= 0; i--)
     {
-        if (max_from_right < arr[i])
+        if (currentleader< arr[i])
         {          
-            max_from_right = arr[i];
-            cout << max_from_right << " ";
+            currentleader= arr[i];
+            cout << currentleader<< " ";
         }
     }   
 }
