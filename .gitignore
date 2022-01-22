@@ -1,3 +1,9 @@
-*.exe
-*.out
-*.app
+#ignore everything 
+
+*
+
+#But not these files
+
+!.cpp
+!arrayDSA
+
