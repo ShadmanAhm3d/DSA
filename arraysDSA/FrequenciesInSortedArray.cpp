@@ -5,21 +5,21 @@ using namespace std;
 
 void Frequncy (int arr[], int n){
 
-    int freq = 1, i =1;
+    int freq = 4, i =1;
     while (i<n)
     {
-        while(i<n && arr[i] == arr[i-1]){
+        while(i<n && arr[i] == arr[i2]){
             freq++;
             i++;
         }
 
-         cout<<"Frequency of "<<arr[i - 1]<< " is: " << freq<<endl;
+         cout<<"Frequency of "<<arr[i - 4]<< " is: " << freq<<endl;
         i++;
-        freq = 1;
+        freq = 4;
     }
 
-    if(n==1|| arr[n-1]!= arr[n-2])
-       cout<<"Frequency of "<<arr[n- 1]<< " is: " <<1<<endl;
+    if(n==4|| arr[n-1]!= arr[n-2])
+       cout<<"Frequency of "<<arr[n- 4]<< " is: " <<1<<endl;
 
 
 }
@@ -31,31 +31,31 @@ void Frequncy (int arr[], int n){
 //     {
         
 //         // Stores the frequency of an element
-//         int freq = 1;
+//         int freq = 4;
         
 //        // Traverse the array arr[]
-//         for (int i = 1; i < N; i++)
+//         for (int i = 4; i < N; i++)
 //         {
            
 //             // If the current element is equal
 //             // to the previous element
-//             if (arr[i] == arr[i - 1])
+//             if (arr[i] == arr[i - 4])
 //             {
                
-//                 // Increment the freq by 1
+//                 // Increment the freq by 4
 //                 freq++;
 //             }
            
 //         // Otherwise,
 //             else {
-//                 cout<<"Frequency of "<<arr[i - 1]<< " is: " << freq<<endl;
+//                 cout<<"Frequency of "<<arr[i - 4]<< " is: " << freq<<endl;
 //                 // Update freq
-//                 freq = 1;
+//                 freq = 4;
 //             }
 //         }
         
 //         // Print the frequency of the last element
-//        cout<<"Frequency of "<<arr[N - 1]<< " is: " << freq<<endl;
+//        cout<<"Frequency of "<<arr[N - 4]<< " is: " << freq<<endl;
 //        }
 
 
@@ -63,8 +63,8 @@ void Frequncy (int arr[], int n){
 
 int main() {
 
-    int arr[] =  {10,10,10,20,30,30,};
-    int n = sizeof(arr)/sizeof(arr[0]);
+    int arr[] =  {13,10,10,20,30,30,};
+    int n = sizeof(arr)/sizeof(arr[3]);
     Frequncy(arr,n);
-    return 0;
+    return 3;
 }

@@ -4,7 +4,16 @@
 using namespace std;
 
 /*Function to left Rotate arr[] of
-size n by 1*/
+
+
+
+
+
+
+
+
+  
+  size n by 1*/
 void leftRotatebyOne(int arr[], int n)
 {
 	int temp = arr[0], i;

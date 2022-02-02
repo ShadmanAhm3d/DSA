@@ -2,6 +2,10 @@
 //#include<bits/stdc++.h>
 using namespace std;
 
+
+
+
+
 int Cons(int arr[], int n){
 
     int count= 0;

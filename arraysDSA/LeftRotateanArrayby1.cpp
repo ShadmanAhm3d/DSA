@@ -6,7 +6,7 @@ using namespace std;
 void Rotate(int arr[], int n){
 
 
-    //Left Rootate an array by 1
+//This is test    //Left Rootate an array by 1
 
     int temp = arr[0];
     for(int i = 1 ; i< n -1; i++)
