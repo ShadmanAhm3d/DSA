@@ -8,7 +8,7 @@ using namespace std;
 //         if(arr[i] == 7){
 //           return  arr[i-1];
 //         }
-
+//Th
 //     }
 //     return 0;
 // }
