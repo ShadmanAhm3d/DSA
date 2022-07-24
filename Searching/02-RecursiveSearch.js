@@ -13,7 +13,6 @@ function binarySearch(arr, low, high, x){
 		if (arr[mid] > x)
 			return binarySearch(arr, low, mid - 1, x);
 
-
 		// Else the element can only be present
 		// in right subarray
 		return binarySearch(arr, mid + 1, high, x);
