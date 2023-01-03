@@ -1,6 +1,7 @@
 #include <iostream>
 //#include<bits/stdc++.h>
-using namespace std;
+using namespace std; 
+
 
 
 void CoinFlips(int arr[] , int n){

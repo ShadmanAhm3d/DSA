@@ -19,7 +19,6 @@ int Move(int arr[], int n)
     }
 
 }
-
 //To print the array
 void printArray(int arr[], int n)
 {

@@ -3,7 +3,6 @@ using namespace std;
 
 
 
-
 //NAIVE APPROACH #1
 // int MaxDiff(int arr[], int n  ){
 	
