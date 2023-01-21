@@ -22,7 +22,6 @@ int takeip (int arr[R][C]){
   return 0;
 }
 
-
 int main() {
 
   int arr[R][C] ;

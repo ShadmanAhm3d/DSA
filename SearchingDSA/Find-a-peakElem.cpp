@@ -3,7 +3,6 @@
 using namespace std;
 
 
-
 int Peakelem (int arr[], int n,int low, int high){
    
 
@@ -20,6 +19,7 @@ int Peakelem (int arr[], int n,int low, int high){
     }
     return -1;
 }
+
 
 int findpeak(int arr[], int n){
     return Peakelem(arr, n,0,n-1);

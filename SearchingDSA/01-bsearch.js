@@ -24,3 +24,5 @@ result = Bsearch(arr, x);
 (result == -1)
   ? console.log("element not present " )
   : console.log("element present in index number " + result);
+
+

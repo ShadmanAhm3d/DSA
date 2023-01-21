@@ -4,7 +4,7 @@ using namespace std;
 /* C++ Function to print leaders in an array */
 void printLeaders(int arr[], int size)
 {
-    int currentleader =  arr[size-1];
+    int  currentleader =  arr[size-1];
  
     /* Rightmost element is always leader */
     cout <<currentleader<< " ";
