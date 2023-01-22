@@ -1,6 +1,7 @@
 
 
 #include <bits/stdc++.h>
+#include <unordered_map>
 
 using namespace std;
 const int CHARS  = 256;
@@ -19,8 +20,26 @@ char leftmost(string s1) {
   return '$';
 }
 
-int main() {
-  string s1 = "geeg";
+string notcheck(string s1){
+ unordered_map<char, int>umap;
+  for(auto x : s1)
+  umap[x]++;
+  string ans;
+  int n = s1.length();
+  for (auto itr : umap){
+    int key = itr.first;
+    int count = itr.second;
+    if(count == 1)
+      ans.push_back(key) ;
+  }
+  return ans;
+}
 
-  cout << leftmost(s1);
+
+
+int main() {
+  string s1 = "geeksrofgeeks";
+
+/*   cout << leftmost(s1); */
+  cout << notcheck(s1);
 }
