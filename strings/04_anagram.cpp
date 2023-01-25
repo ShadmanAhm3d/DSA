@@ -1,7 +1,7 @@
 #include <bits/stdc++.h>
 
-using namespace std;
 const int CHAR = 256;
+using namespace std;
 bool ana(string s1, string s2) {
   int count[CHAR] = {0};
   if (s1.length() != s2.length())
@@ -13,7 +13,7 @@ bool ana(string s1, string s2) {
   for (int i = 0; i < CHAR; i++) {
     if (count[i] != 0)
       return false;
-  }
+  }ijad
   return true;
 }
 
