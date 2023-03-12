@@ -62,9 +62,21 @@ class Stack{
   }
 
 
+void getmin(){
+    auto lowest = 0;
+    int i =0;
+    while (i < size ) {
+       if(arr[i] < lowest){
+         arr[i] = lowest;
+         i++;
+       }else{
+         i++;
+       }
+    }
+    cout << "Lowest :" << lowest;
+}
+
 };
-
-
 
 
 
@@ -107,7 +119,7 @@ int main(){
   else
     cout << "STACK  empty nahi hai bhai" << endl;
 
-
+   st.getmin();
 
 
   return 0;
