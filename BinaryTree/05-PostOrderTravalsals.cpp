@@ -1,3 +1,4 @@
+#include <cstddef>
 #include <iostream>
 #include <stdio.h>
 #include <queue>
@@ -17,10 +18,11 @@ public:
   }
 };
 
+
 TreeNode *buildTree(TreeNode *root) {
   // recursion based tree structurting why ??? no idea bro
 
-  cout << "Enter the data" << endl;
+  // cout << "Enter the data" << endl;
   int data;
   cin >> data;
 
@@ -29,48 +31,28 @@ TreeNode *buildTree(TreeNode *root) {
   if (data == -1)
     return NULL;
 
-  cout << "Enter the data on the left of " << data << endl;
+  // cout << "Enter the data on the left of " << data << endl;
   root->left = buildTree(root->left);
-  cout << "Enter the data on the right of " << data << endl;
+  // cout << "Enter the data on the right of " << data << endl;
   root->right = buildTree(root->right);
   return root;
 }
 
+void postorder(TreeNode* root){
 
-void bfs(TreeNode* root){
+  //we use recursion here
 
-   queue<TreeNode *>q;
-   q.push(root);
-   q.push(NULL);
-
-   while (!q.empty()) {
-     
-     TreeNode* temp = q.front();
-     q.pop();
-
-     if(temp == NULL){
-       cout << endl;
-
-       if(!q.empty()){
-         q.push(NULL);
-       }
-     }else{
-
-     cout << temp->data << " ";
-
-     if (temp->left) {
-        q.push( temp->left); 
-     }
-   
-     if (temp->right) {
-        q.push( temp->right); 
-     }
-   }
-     }
+  //base case
+  if(root == NULL){
+    return;
+  }
 
 
+  postorder(root->left);
+  postorder(root->right);
+  cout << root->data << " ";
 
-  
+
 }
 
 
@@ -83,7 +65,7 @@ int main() {
 
   root = buildTree(root);
   
-  bfs(root);
+  postorder(root);
 
 
   return 0;

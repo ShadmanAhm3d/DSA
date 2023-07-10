@@ -2,7 +2,6 @@
 
 // passing 2D arrays as arguments and printing the sum of the rows
 using namespace std;
-
 const int R = 3;
 const int C = 3;
 
@@ -22,6 +21,7 @@ int takeip(int arr[R][C]) {
   }
   return 0;
 }
+
 
 int Largestrow(int arr[R][C]) {
 

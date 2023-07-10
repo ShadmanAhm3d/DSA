@@ -1,63 +1,48 @@
-#include<iostream>
-//#include<bits/stdc++.h>
+#include <bits/stdc++.h>
+#include <map>
 using namespace std;
 
+int solve(int arr[], int n) {
+       
+     int cnt  = 0;
+
+     int elem;
+
+     for ( int i =0 ; i  < n ; i++){ 
+         if( cnt ==0){
+             elem = arr[i];
+             cnt = 1;
+         }else if(arr[i] == elem){
+             cnt++;
+         }else{
+             cnt--;
+         }
+
+     }
+     int secondcounter =0;
+     for(int i=0; i<n;i++){
+        if(arr[i] == elem)  secondcounter++;
+     }
+
+     if(secondcounter  > n/2 )
+         return elem;
+         
 
 
-// Naive Approach 0(n2)time
- int MajorityElement(int arr[] , int n){
-
-    for(int i=0;i<n ; i++){
-        int count = 1;
-        for(int j=i+1;j<n;j++)
-        if(arr[i] == arr[j])
-        count++;
-
-        if( count > n/2)
-        return arr[i] ;   
-    }
-    return -1;
+     return -1;
 }
 
-
-// Efficient Solution:: 0(n) Time Complexity
-//We are using Murays voting algorithm .
-//The function is divided in 2 phases;
-// int  MajorityElement(int arr[] ,int n){
-
-//       int count = 1;
-//       int res =0;
-//       for(int i =1;i < n ; i++){
-//             if(arr[res] == arr[i])
-//             count++;
-//             else 
-//             count --;
-
-//             if(count == 0)
-//             res = i;
-//             count  =1;
-//       }
-
-// //Phase 2 : Checks how many times it occuring and is its count > n/2
-//       count = 0;
-//       for(int i =0 ; i < n ; i++)
-//             if(arr[res ] == arr[i])
-//             count ++;
-
-//             if(count <= n/2)
-//             res = -1;
-      
-
-//       return res;
-
-      
-// }
-
-
-int main(){
-
-      int arr[] = {3,1,3,3,2};
-   	  int n = sizeof(arr) / sizeof(arr[0]);
-     cout << "Index " << MajorityElement(arr,n) <<" Element appears Majority Times" << endl;
-      return 0;
+void printArray(int arr[], int size) {
+  for (int i = 0; i < size; i++)
+    cout << arr[i] << " ";
+  cout << endl;
 }
+
+int main() {
+  int arr[] = {15,1,1,1,1,1,1,3,4,4,5};
+  int n = sizeof(arr) / sizeof(arr[0]);
+  cout << "Number of Element Processed in the array " << n << endl;
+  cout << solve(arr, n) << endl;
+  return 0;
+}
+

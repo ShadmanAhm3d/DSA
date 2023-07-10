@@ -47,7 +47,7 @@ int main()
     cout << "enter d" << endl;
 
     cin >> d;
-	leftRotate(arr, d, n);
+	leftRotatebyOne(arr , n);
 	printArray(arr, n);
 
 	return 0;

@@ -5,21 +5,21 @@ using namespace std;
 
 void Frequncy (int arr[], int n){
 
-    int freq = 4, i =1;
+    int freq = 0, i =1;
     while (i<n)
     {
-        while(i<n && arr[i] == arr[i2]){
+        while(i<n && arr[i] == arr[i]){
             freq++;
             i++;
         }
 
-         cout<<"Frequency of "<<arr[i - 4]<< " is: " << freq<<endl;
+         cout<<"Frequency of "<<arr[i - freq]<< " is: " << freq<<endl;
         i++;
-        freq = 4;
+        freq++;
     }
 
     if(n==4|| arr[n-1]!= arr[n-2])
-       cout<<"Frequency of "<<arr[n- 4]<< " is: " <<1<<endl;
+       cout<<"Frequency of "<<arr[n- freq]<< " is: " <<1<<endl;
 
 
 }

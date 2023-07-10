@@ -1,3 +1,5 @@
+
+#include <cstddef>
 #include <iostream>
 #include <stdio.h>
 #include <queue>
@@ -36,41 +38,21 @@ TreeNode *buildTree(TreeNode *root) {
   return root;
 }
 
+void inorder(TreeNode* root){
 
-void bfs(TreeNode* root){
+  //we use recursion here
 
-   queue<TreeNode *>q;
-   q.push(root);
-   q.push(NULL);
-
-   while (!q.empty()) {
-     
-     TreeNode* temp = q.front();
-     q.pop();
-
-     if(temp == NULL){
-       cout << endl;
-
-       if(!q.empty()){
-         q.push(NULL);
-       }
-     }else{
-
-     cout << temp->data << " ";
-
-     if (temp->left) {
-        q.push( temp->left); 
-     }
-   
-     if (temp->right) {
-        q.push( temp->right); 
-     }
-   }
-     }
+  //base case
+  if(root == NULL){
+    return;
+  }
 
 
+  inorder(root->left);
+  cout << root->data << " ";
+  inorder(root->right);
 
-  
+
 }
 
 
@@ -83,7 +65,7 @@ int main() {
 
   root = buildTree(root);
   
-  bfs(root);
+  inorder(root);
 
 
   return 0;
