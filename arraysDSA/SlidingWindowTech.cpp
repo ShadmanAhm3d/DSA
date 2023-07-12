@@ -4,30 +4,27 @@ using namespace std;
 
 
 
-//A program which takes a array of integers and a value k and prints out the total maximum value of consective ks
+//A program which takes a array of itegers and a value k and prints out the total maximum value of consective ks
 
 
 
 
-// int maxfunc(int arr[], int n , int k){
-//     int maxvalue = INT_MIN;
-//     for(int i=0; i < n-k +1 ; i++){
-//         int currmax  = 0;
-//         for(int j =i;j<i+k ;j++){
-//             currmax = currmax + arr[j];
+ int maxfunc(int arr[], int n , int k){
+     int maxvalue = INT_MIN;
+     for(int i=0; i < n-k +1 ; i++){
+         int currmax  = 0;
+         for(int j =i;j<i+k ;j++){
+             currmax = currmax + arr[j];
 
-//         }
-//             maxvalue = max(maxvalue, currmax);
+         }
+             maxvalue = max(maxvalue, currmax);
 
-//     }
-//     return maxvalue;
-// }
+     }
+     return maxvalue;
+ }
 
 
 
-int maxfunc(int arr[] , int n , int k){
-
-}
 
 
 
