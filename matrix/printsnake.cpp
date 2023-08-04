@@ -1,3 +1,4 @@
+
 // Competitive Programming Setup
 #include <algorithm>
 #include <bits/stdc++.h>
@@ -25,38 +26,23 @@ void printf(int arr[R][C]) {
   cout << "--------------" << endl;
 }
 
+void printsnake(int arr[R][C]) {
 
-void rotate(int arr[R][C]) {
-
-  for (int i = C - 1; i >= 0; i--) {
-    for (int j = 0; j < R; j++) {
-      cout << arr[j][i] << " ";
+  for (int i = 0; i < R; i++) {
+    if (i % 2 == 0) {
+      for (int j = 0; j < C; j++)
+        cout << arr[i][j] << " ";
+    } else {
+      for (int j = C - 1; j >= 0; j--)
+        cout << arr[i][j] << " ";
     }
-    cout << endl ;
   }
 }
-
-void rotate2(int arr[R][C]) {
-
-  for (int i = 0; i <C; i++) {
-    for (int j = R-1; j >=0; j--) {
-      cout << arr[j][i] << " ";
-    }
-    cout << endl ;
-  }
-}
-
 int main() {
   int arr[R][C];
   cout << "Enter the values " << endl;
   takeip(arr);
   printf(arr);
-  cout << endl << " BOUNDARY : " << endl;
-  cout << "Anticlock Rotate 90 : " << endl ;
-  rotate(arr);
-  
-  cout << "Clockwise Rotate2 90 : " << endl ;
-  rotate2(arr);
+  printsnake(arr);
   return 0;
 }
-

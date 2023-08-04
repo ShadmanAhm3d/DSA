@@ -5,17 +5,18 @@ using namespace std;
 
 void Rotate(int arr[], int n){
 
-
 //This is test    //Left Rootate an array by 1
-
     int temp = arr[0];
     for(int i = 1 ; i< n; i++)
     {
         arr[i-1] = arr[i];
     }
-
         arr[n-1] = temp;
+}
 
+void byd(int arr[], int d,int n){
+    for(int i= 0 ; i < d; i++)
+        Rotate(arr,n);
 }
 
 //To print the array
@@ -32,7 +33,7 @@ int main()
   
     cout << "Original array: ";
     printArray(arr, n);
-    Rotate(arr, n);
+    byd(arr,2, n);
     cout << "Modified array" << endl;
     printArray(arr, n) ;
     return 0;

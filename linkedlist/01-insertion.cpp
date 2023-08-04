@@ -68,19 +68,18 @@ void printall(Node *&head) {
 }
 
 int main() {
-
-  Node *node1 = new Node(11);
+  cout << "enter the data at new node" << endl;
+  int d ;
+  cin >>d ;
+  Node *node1 = new Node(d);
   Node *head = node1;
   Node *tail = node1;
 
   InsertAthead(13, head);
   InsertAthead(14, head);
-
-  InseertAtend(15, tail);
-  InseertAtend(16, tail);
-  InseertAtend(17, tail);
-
-  InsertatPos(head, 3, 5, tail);
+  InsertAthead(16, head);
+  InsertAthead(17, head);
+  InsertatPos(head, 15 ,1,tail);
   printall(head);
   return 0;
 }

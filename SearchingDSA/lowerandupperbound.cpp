@@ -46,9 +46,9 @@ int bs(int arr[], int n, int target) {
     int m = (h + l) / 2;
     if (arr[m] > target) {
       h = m -1;
-      ans = m;
     } else if (arr[m] <= target) {
       l = m + 1;
+      ans = m;
   }
   }
 
@@ -70,7 +70,7 @@ int main() {
 
   int arr[] = {1, 2, 3, 3, 7, 8,8,9 , 9, 9,11};
   int n = sizeof(arr) / sizeof(arr[0]);
-  int x = 8;
+  int x = 9;
   cout << "Original Array: ";
   printArray(arr, n);
   cout << endl << "The size of array " << n << endl;
