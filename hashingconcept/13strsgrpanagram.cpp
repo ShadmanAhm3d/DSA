@@ -1,41 +1,39 @@
-#include <algorithm>
 #include <iostream>
-#include <map>
-#include <unordered_map>
-#include <unordered_set>
 #include <vector>
+#include <unordered_map>
+#include <algorithm>
 
 using namespace std;
 
-vector<string> relativesortt(vector<string> &arr1) {
+vector<vector<string>> groupAnagrams(vector<string>& strs) {
+    vector<vector<string>>ans;
+         unordered_map<string,vector<string>>umap;
 
-  vector<string> answer;
-  unordered_map<string , vector<string>> umap;
+         for(auto x : strs){
+             string temp = x;
+             sort(x.begin(),x.end());
+             umap[x].push_back(temp);
+         }
 
-   for (auto x: arr1){
-    string temp = x;
-    sort(x.begin(),x.end());
-    umap[x].push_back(temp);
-  }
-   
-   /* for (auto x : umap){
-     vector<int>temp = x.second();
-     answer.push_back(temp);
-  } */
+         
+         for(auto i : umap){
+         
+             ans.push_back(i.second);
 
-   for (auto itr= umap.begin(); itr!=umap.end();itr++){
-    answer.push_back(itr->second());
-  }
-
-  return answer;
-}
+         }
+         return ans;}
 
 int main() {
-  vector<string>arr1{"eat","tea","tan","ate","nat","bat"};
-  vector<string> v = relativesortt(arr1 );
-  for (int i = 0; i < v.size(); i++) {
-    cout << v[i] << " ";
-  }
-
-  return 0;
+    vector<string> strs = {"eat", "tea", "tan", "ate", "nat", "bat"};
+    vector<vector<string>> output = groupAnagrams(strs);
+    
+    for (const vector<string>& group : output) {
+        for (const string& word : group) {
+            cout << word << " ";
+        }
+        cout << endl;
+    }
+    
+    return 0;
 }
+
