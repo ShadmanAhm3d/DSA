@@ -1,3 +1,4 @@
+#include <algorithm>
 #include <iostream>
 #include <stack>
 using namespace std;
@@ -6,7 +7,7 @@ using namespace std;
 
 class Stack{
 
-
+  
  // properties 
 
    public:

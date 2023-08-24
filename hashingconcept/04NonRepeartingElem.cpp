@@ -5,7 +5,6 @@
 #include <unordered_set>
 using namespace std;
 
-
 //NOTE --> Naive sol
 /*
 int firstNonRepeating(int arr[], int n)
@@ -43,7 +42,6 @@ int firstNonRepeating(int arr[], int n){
   }
     return 0;
 
-}
 
 
 
@@ -53,9 +51,10 @@ int firstNonRepeating(int arr[], int n){
 
 
 
-// Driver code
-int main()
-{
+
+
+
+
 	int arr[] = { 9, 4, 9, 6, 7, 4 };
 	int n = sizeof(arr) / sizeof(arr[0]);
 	cout << firstNonRepeating(arr, n);

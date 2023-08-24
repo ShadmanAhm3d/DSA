@@ -52,7 +52,6 @@ void inorder(TreeNode* root){
   cout << root->data << " ";
   inorder(root->right);
 
-
 }
 
 

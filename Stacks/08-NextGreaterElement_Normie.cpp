@@ -11,7 +11,6 @@ public:
 
     vector<int> answer;
 
-    int lastelem = nums2.size()-1;
     for (int i = 0; i < nums1.size(); i++) {
         int val = -1;
         int elem = nums1[i];
