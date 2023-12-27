@@ -21,7 +21,7 @@ void CoinFlips(int arr[] , int n){
 
 int main()
 {
-    int arr[] = {0,0,1,1,0,0,1,1};
+    int arr[] = {0,0,0,0,0,0};
     int n = sizeof(arr) / sizeof(arr[0]);
     CoinFlips(arr, n);
 

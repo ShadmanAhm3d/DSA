@@ -9,8 +9,7 @@
 
 using namespace std;
 
-
-//lower bound
+// lower bound
 /* int bs(int arr[], int n, int target) {
 
   int l = 0;
@@ -30,12 +29,7 @@ using namespace std;
   return ans;
 } */
 
-
-
-
-
-
-//upper bound
+// upper bound
 int bs(int arr[], int n, int target) {
 
   int l = 0;
@@ -45,20 +39,15 @@ int bs(int arr[], int n, int target) {
   while (l <= h) {
     int m = (h + l) / 2;
     if (arr[m] > target) {
-      h = m -1;
+      h = m - 1;
     } else if (arr[m] <= target) {
       l = m + 1;
       ans = m;
-  }
+    }
   }
 
   return ans;
 }
-
-
-
-
-
 
 void printArray(int arr[], int size) {
   for (int i = 0; i < size; i++)
@@ -68,7 +57,7 @@ void printArray(int arr[], int size) {
 
 int main() {
 
-  int arr[] = {1, 2, 3, 3, 7, 8,8,9 , 9, 9,11};
+  int arr[] = {1, 2, 3, 3, 7, 8, 8, 9, 9, 9, 11};
   int n = sizeof(arr) / sizeof(arr[0]);
   int x = 9;
   cout << "Original Array: ";

@@ -18,7 +18,7 @@ int MaxProfit(int arr[] , int n){
 
 int main(){
 
-    int arr[] = {1,5,2,4,8};
+    int arr[] = {7,1,5,3,6,4};
     int n = sizeof(arr) / sizeof(arr[0]);
 
    cout <<  MaxProfit(arr,n);

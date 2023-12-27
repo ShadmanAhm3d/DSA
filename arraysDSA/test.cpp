@@ -7,14 +7,15 @@ using namespace std;
 
    int res = arr[1] - arr[0];
    int minval = arr[0];
-
+  
+   
+ 
    for (int i = 0; i < arr_size -1 ; i++) {
      res = ( res, arr[i] - minval);
      minval  = (minval , arr[i]);
     
    }
    return res;
-
  }
 
 
