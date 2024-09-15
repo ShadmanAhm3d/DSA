@@ -17,6 +17,8 @@ public:
     this->next = NULL;
     this->data = data;
   }
+
+
 };
 
 void InsertAthead(int data, Node *&head) {

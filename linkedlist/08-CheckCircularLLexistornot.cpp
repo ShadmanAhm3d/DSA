@@ -5,8 +5,17 @@
 #include <unordered_map>
 #include <unordered_set>
 #include <vector>
-
 using namespace std;
+
+for (int i = 0; i < n; i++)
+{
+  /* code */
+}
+
+
+
+
+
 
 class Node {
 public:
